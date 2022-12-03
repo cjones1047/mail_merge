@@ -19,6 +19,6 @@ for name in cleaned_names_list:
         template_list[0] = f"Dear {name},\n"
         for line in template_list:
             named_letter_list.append(line)
-    print(named_letter_list)
-    #     # with open(f"Output/ReadyToSend/{name}.txt", mode="w") as new_letter:
-    #     #     for l
+    with open(f"Output/ReadyToSend/{name}.txt", mode="w") as new_letter:
+        for line in named_letter_list:
+            new_letter.write(line)
